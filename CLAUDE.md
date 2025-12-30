@@ -8,9 +8,11 @@ This is a Retrieval-Augmented Generation (RAG) chatbot system for querying cours
 
 ## Development Commands
 
+**IMPORTANT**: This project uses `uv` for package management. Always use `uv` commands - **never use `pip` directly**.
+
 ### Setup
 ```bash
-# Install dependencies
+# Install dependencies (use uv, not pip!)
 uv sync
 
 # Set up environment (required)
@@ -29,6 +31,18 @@ cd backend && uv run uvicorn app:app --reload --port 8000
 # Access points:
 # - Web UI: http://localhost:8000
 # - API docs: http://localhost:8000/docs
+```
+
+### Package Management
+```bash
+# Add a new dependency (use uv, not pip!)
+uv add <package-name>
+
+# Install dependencies
+uv sync
+
+# Run Python commands
+uv run <command>
 ```
 
 ## Architecture
